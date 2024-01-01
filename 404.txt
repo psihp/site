@@ -1,0 +1,24 @@
+<h1 class="title">404! Page Not Found</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+
+<br>
+<img src="test.jpg" width="250" height="250" style="float:right;vertical-align:top">
+The page you requested cannot be found (perhaps it was moved or renamed).
+You may want to try searching to find the page’s new location. <br>If you still didn't found it, We maybe working on it. <br>So,
+ you can expect that trying after some time will work, <br>also help me notice same by mailing<br>
+ajaypal.sunil@gmail.com
+
+

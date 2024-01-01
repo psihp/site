@@ -119,21 +119,28 @@ cookieconsent.run({
     <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./automation.qmd" rel="" target="">
+ <span class="dropdown-text">Automation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Contribute.html" rel="" target="">
- <span class="menu-text">Contribute</span></a>
+        <li>
+    <a class="dropdown-item" href="./neuro.qmd" rel="" target="">
+ <span class="dropdown-text">Life Sciences</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./Contribute.html" rel="" target="">
+ <span class="dropdown-text">Contribute</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./Resources.html" rel="" target="">
  <span class="menu-text">Resources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./People.html" rel="" target="">
- <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Blog.html" rel="" target="">
@@ -142,10 +149,6 @@ cookieconsent.run({
   <li class="nav-item">
     <a class="nav-link" href="./Gallery.html" rel="" target="">
  <span class="menu-text">Gallery</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./404.html" rel="" target="">
- <span class="menu-text">Extra</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
@@ -163,18 +166,19 @@ cookieconsent.run({
     </ul>
   </li>
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-    <a href="https://twitter.com" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter-x"></i></a>
+            <div class="quarto-navbar-tools ms-auto tools-wide">
+    <a href="https://twitter.com/ajay_p5" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter-x"></i></a>
+    <a href="https://www.linkedin.com/in/ajayskumar" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="GitHub"><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://code.com">
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://github.com/psihp">
             Profile
             </a>
           </li>
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://bugs.com">
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="mailto:ajaypal.sunil@gmail.com">
             Report a Bug
             </a>
           </li>
@@ -213,8 +217,8 @@ cookieconsent.run({
 <p>Ajay is a passionate Biotechnologist, Fascinated by Neurodevelopmental and Neurodegenerative processes, Ajay also has a soft spot for BCI and signal encoding. Currently, he is devoted to investigating Covid19 associated neurodegeneration.</p>
 <section id="education" class="level2">
 <h2 data-anchor-id="education">Education</h2>
-<p>Reguional Centre for Biotechnology, Faridabad | Faridabad, Haryana M.Sc. in Biotechnology (Molecular Diagnostics &amp; DNA Profiling) | August 2019 - July 2021</p>
-<p>Guru Jambheshwar University Of Science &amp; Technology | Hisar, Haryana B.Sc.(hons.) in Biotechnology | August 2016 - July 2019</p>
+<p>Regional Centre for Biotechnology, Faridabad | Faridabad, Haryana | M.Sc. in Biotechnology (Molecular Diagnostics &amp; DNA Profiling) | August 2019 - July 2021</p>
+<p>Guru Jambheshwar University Of Science &amp; Technology | Hisar, Haryana | B.Sc.(hons.) in Biotechnology | August 2016 - July 2019</p>
 </section>
 <section id="experience" class="level2">
 <h2 data-anchor-id="experience">Experience</h2>
@@ -234,6 +238,14 @@ cookieconsent.run({
   <a href="https://github.com/psihp" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
+  </a>
+  <a href="https://www.linkedin.com/in/ajayskumar" class="about-link" rel="" target="">
+    <i class="bi bi-linkedin"></i>
+     <span class="about-link-text">Linkedin</span>
+  </a>
+  <a href="mailto:ajaypal.sunil@gmail.com" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">Email</span>
   </a>
 </div>
 </div>
@@ -467,23 +479,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">test</div>   
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
     <div class="nav-footer-center">© 2024, Ajay Pal<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookies</a></div></div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/">
-      <i class="bi bi-twitter-x" role="img">
-</i> 
-    </a>
-  </li>  
-</ul>
+      &nbsp;
     </div>
   </div>
 </footer>
