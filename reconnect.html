@@ -24,7 +24,7 @@
     </div>
 
     <!-- Main Content Container -->
-    <main class="relative z-10 max-w-lg w-full mx-auto px-4 py-12 flex flex-col items-center flex-grow">
+    <main class="relative z-10 max-w-md w-full mx-auto px-6 py-12 flex flex-col items-center justify-center flex-grow">
         
         <!-- Profile / Header Section -->
         <div class="text-center mb-8">
@@ -36,7 +36,7 @@
         </div>
 
         <!-- Action Links Card -->
-        <div class="w-full space-y-4 mb-8">
+        <div class="w-full space-y-4">
             
             <!-- Reconnect Email Link -->
             <a href="mailto:ajpal@utmb.edu?subject=Reconnect%20after%20conference" 
@@ -53,34 +53,22 @@
                 <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-blue-400 transition-colors"></i>
             </a>
 
-        </div>
-
-        <!-- Embedded Google Form Section -->
-        <div class="w-full bg-slate-800/80 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden p-2">
-            <div class="p-4 border-b border-slate-700/60 flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
-                    <i class="fa-solid fa-comments text-sm"></i>
+            <!-- Feedback & Suggestions Button (Triggers Modal) -->
+            <button onclick="openModal()" 
+                    class="w-full flex items-center justify-between p-4 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 rounded-xl shadow-md transition-all duration-200 group hover:border-indigo-500/50 hover:scale-[1.02]">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="text-left">
+                        <h2 class="font-semibold text-sm text-slate-200">Feedback & Suggestions</h2>
+                        <p class="text-xs text-slate-400">Design, data, presentation & more</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-sm text-slate-200">Feedback & Suggestions</h3>
-                    <p class="text-xs text-slate-400">Design, data, presentation & more</p>
-                </div>
-            </div>
-            
-            <!-- Google Form IFrame Integration -->
-            <div class="w-full overflow-hidden rounded-xl bg-slate-900 mt-2">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCbgF-A6-Kctsa-YKWZNBn7VoPVML-QZ5x8mH-dIIhqX8HOg/viewform?embedded=true" 
-                        width="100%" 
-                        height="700" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        class="w-full bg-transparent">
-                    Loading form…
-                </iframe>
-            </div>
-        </div>
+                <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-indigo-400 transition-colors text-xs"></i>
+            </button>
 
+        </div>
     </main>
 
     <!-- Footer -->
@@ -88,5 +76,62 @@
         &copy; 2026 AJ Pal &bull; UTMB
     </footer>
 
+    <!-- Google Form Modal Pop-up -->
+    <div id="feedbackModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl relative flex flex-col max-h-[90vh]">
+            
+            <!-- Modal Header & Close Button -->
+            <div class="flex items-center justify-between pb-3 mb-2 border-b border-slate-800">
+                <div class="flex items-center space-x-2">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
+                        <i class="fa-solid fa-comments text-xs"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm text-slate-200">Conference Feedback</h3>
+                </div>
+                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Embedded Google Form Container -->
+            <div class="w-full overflow-hidden rounded-xl bg-slate-950 flex-grow" style="min-height: 500px;">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCbgF-A6-Kctsa-YKWZNBn7VoPVML-QZ5x8mH-dIIhqX8HOg/viewform?embedded=true" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        class="w-full h-[550px] bg-transparent">
+                    Loading form…
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script to Handle Modal Open/Close Actions -->
+    <script>
+        function openModal() {
+            const modal = document.getElementById('feedbackModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('feedbackModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore background scrolling
+        }
+
+        // Close modal when clicking outside of the card box
+        window.onclick = function(event) {
+            const modal = document.getElementById('feedbackModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
